@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ReactMapGL from "react-map-gl";
-import basemap from "./streets.json";
+import imagery from "./mapStyles/esriImagery.json";
 
 const Map = () => {
     const [viewport, setViewport] = useState({
@@ -18,7 +18,7 @@ const Map = () => {
         >
             <ReactMapGL
                 {...viewport}
-                mapStyle={basemap}
+                mapStyle={imagery}
                 onViewportChange={setViewport}
             />
         </div>
